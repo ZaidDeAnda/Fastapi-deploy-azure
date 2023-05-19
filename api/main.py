@@ -8,6 +8,8 @@ names = model.names
 
 app = FastAPI()
 
+print("api ejecutándose")
+
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
     content = await file.read()
