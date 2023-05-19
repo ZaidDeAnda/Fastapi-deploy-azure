@@ -2,6 +2,6 @@ fastapi
 pydantic
 uvicorn
 ultralytics
-opencv-python-headless
+opencv-python
 python-multipart
 psutil
