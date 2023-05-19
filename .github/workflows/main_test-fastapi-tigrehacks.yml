@@ -60,5 +60,5 @@ jobs:
         with:
           app-name: 'test-fastapi-tigrehacks'
           slot-name: 'Production'
-          startup-command: uvicorn api/main:app --reload
+          startup-command: uvicorn api.main:app --reload
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_80F8B5A6BD794BAD82EA4DC850050F66 }}
