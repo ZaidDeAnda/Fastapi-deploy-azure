@@ -1,4 +1,4 @@
 fastapi
 uvicorn
 ultralytics
-libgl1
+opencv-python-headless
