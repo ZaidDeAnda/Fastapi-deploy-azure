@@ -15,4 +15,10 @@ async def predict(file: UploadFile = File(...)):
     content = await file.read()
     image = Image.open(io.BytesIO(content)).convert("RGB")
     results = model.predict(source=image)
-    return {"prediction": names[int(results[0].boxes.cls)]}
+
+    prediction_list = [names[int(result)] for result in results[0].boxes.cls]
+
+    if 'cat' in prediction_list:
+        return {"prediction": "Hay un michi en tu imagen 🐱"}
+    else:
+        return {"prediction": "A tu imagen le faltan michis"}
